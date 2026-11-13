@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8b0000">
+  <meta name="description" content="Simule valores de cartas de crédito e conheça opções de consórcio.">
+  <title>Presente de Natal | Consórcios e Cartas de Crédito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#inicio"><span class="brand-mark">🎁</span> Presente de Natal</a>
+  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a href="#inicio">Início</a><a href="#simulador">Simulador</a><a href="#vantagens">Vantagens</a>
+    <a href="#administradoras">Administradoras</a><a href="#contato">Fale conosco</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="snow" aria-hidden="true">❄ ✦ ❄ ✧ ❄ ✦ ❄</div>
+  <div class="hero-copy">
+    <p class="eyebrow">🎄 Natal e Ano Novo 🎆</p>
+    <h1>Chegou o presente<br>que pode abrir novos caminhos!</h1>
+    <p class="hero-sub">Consórcios e cartas de crédito para planejar a conquista do seu carro, moto ou imóvel.</p>
+    <div class="offer">CONDIÇÃO ESPECIAL DE NATAL</div>
+    <p class="hero-note">Simule uma condição de entrada reduzida e confira os valores antes de conversar com um consultor.</p>
+    <a class="btn gold" href="#simulador">Fazer minha simulação</a>
+  </div>
+  <div class="hero-art" aria-label="Ilustração natalina com Papai Noel, família, carro e moto">
+    <div class="moon">✦</div>
+    <div class="santa">🎅</div>
+    <div class="gift g1">🎁</div><div class="gift g2">🎁</div>
+    <div class="family">👨‍👩‍👧‍👦</div>
+    <div class="vehicles"><span>🚗</span><span>🏍️</span></div>
+    <div class="fireworks">✨ 🎆 ✨</div>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <span>🎄 Planejamento</span><span>💳 Simulação transparente</span><span>🎁 Atendimento pelo WhatsApp</span>
+</section>
+
+<section class="section" id="simulador">
+  <div class="section-heading">
+    <p class="eyebrow red">FAÇA SUA SIMULAÇÃO</p>
+    <h2>Quanto você pretende investir?</h2>
+    <p>Escolha o valor da carta e o percentual de entrada para ver os cálculos.</p>
+  </div>
+  <div class="simulator">
+    <div class="fields">
+      <label for="credit">Valor da carta de crédito</label>
+      <select id="credit">
+        <option value="20000">R$ 20.000</option><option value="30000">R$ 30.000</option>
+        <option value="40000">R$ 40.000</option><option value="50000">R$ 50.000</option>
+        <option value="60000">R$ 60.000</option><option value="70000">R$ 70.000</option>
+        <option value="80000">R$ 80.000</option><option value="100000">R$ 100.000</option>
+        <option value="150000">R$ 150.000</option><option value="200000">R$ 200.000</option>
+        <option value="250000">R$ 250.000</option><option value="300000">R$ 300.000</option>
+      </select>
+      <label for="rate">Percentual de entrada</label>
+      <select id="rate"><option value="15">15%</option><option value="20">20%</option><option value="30">30%</option></select>
+      <label for="reduction">Redução promocional sobre a entrada</label>
+      <select id="reduction"><option value="50">50% (condição anunciada)</option><option value="0">Sem redução</option></select>
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="result-label">Sua simulação</p>
+      <div class="result-row"><span>Valor da carta</span><strong id="r-credit">R$ 20.000,00</strong></div>
+      <div class="result-row"><span>Entrada calculada</span><strong id="r-entry">R$ 3.000,00</strong></div>
+      <div class="result-row"><span>Redução calculada</span><strong id="r-discount">R$ 1.500,00</strong></div>
+      <div class="pay"><span>Entrada após redução</span><strong id="r-pay">R$ 1.500,00</strong></div>
+      <button class="btn green" id="whatsapp-sim">Enviar esta simulação pelo WhatsApp</button>
+      <p class="small">Cálculo estimativo para consulta. A redução não altera automaticamente o valor da carta nem garante aprovação, contemplação ou liberação imediata do crédito. Condições, taxas, parcelas e disponibilidade devem ser confirmadas por escrito com a administradora responsável.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section table-section">
+  <div class="section-heading"><p class="eyebrow red">CONSULTE OS VALORES</p><h2>Consórcios e cartas de crédito</h2><p>Valores de entrada calculados sobre o percentual selecionado.</p></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Valor da carta</th><th>Entrada 15%</th><th>Entrada 20%</th><th>Entrada 30%</th></tr></thead>
+    <tbody id="table-body"></tbody>
+  </table></div>
+</section>
+
+<section class="section advantages" id="vantagens">
+  <div class="section-heading"><p class="eyebrow red">VANTAGENS</p><h2>Planeje sua próxima conquista</h2></div>
+  <div class="adv-grid">
+    <article><span>🧾</span><h3>Planejamento</h3><p>Organize sua compra com base no orçamento e nas regras do plano.</p></article>
+    <article><span>📆</span><h3>Parcelas planejadas</h3><p>Consulte prazos, parcelas, taxas e reajustes antes de contratar.</p></article>
+    <article><span>🤝</span><h3>Atendimento</h3><p>Tire dúvidas e peça as condições completas por escrito.</p></article>
+  </div>
+</section>
+
+<section class="section admin" id="administradoras">
+  <div class="section-heading"><p class="eyebrow">OPÇÕES DO MERCADO</p><h2>Administradoras para pesquisar</h2><p>Os nomes abaixo são referências independentes. Este site não declara parceria, representação ou autorização dessas empresas.</p></div>
+  <div class="admin-list"><span>Rodobens</span><span>Embracon</span><span>Porto Bank</span><span>Consórcio Honda</span><span>BB Consórcios</span><span>Itaú Consórcios</span><span>Bradesco Consórcios</span></div>
+</section>
+
+<section class="contact" id="contato">
+  <div><p class="eyebrow">🎅 UM NATAL DE NOVOS PLANOS</p><h2>Quer conversar sobre sua simulação?</h2><p>Entre no grupo do WhatsApp e envie os dados da simulação para atendimento.</p></div>
+  <a class="btn gold" id="group-link" href="https://chat.whatsapp.com/ITWBIAG4d1REGgs2wBWC6t?s=sh&p=a&iam=2" target="_blank" rel="noopener">Entrar no grupo do WhatsApp</a>
+</section>
+</main>
+
+<footer><h2>🎄 Realize seus planos neste Natal e Ano Novo!</h2><p>Informação clara é o primeiro passo para uma boa decisão.</p><small>Este site é um simulador independente. Não representa as administradoras citadas. Consórcio não é empréstimo e não garante contemplação imediata. Verifique a identidade do fornecedor, o contrato, as taxas e as regras oficiais antes de pagar qualquer valor.</small></footer>
+<script src="script.js"></script>
+</body></html>
